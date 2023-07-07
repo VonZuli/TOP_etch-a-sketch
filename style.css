@@ -4,11 +4,6 @@
 }
 
 #container {
-  /* display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
-  grid-column-gap: 0;
-  grid-row-gap: 0; */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -17,12 +12,14 @@
   height: 90%;
   row-gap: 0px;
   margin: 0 auto;
+  border: 4px solid black;
 }
 .canvasItem {
   flex-basis: 6.25%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   height: 50px;
-  border: 1px solid red;
+  /* width: 50px; */
+  /* max-width: 100%; */
 }
 
 .colored {
@@ -32,7 +29,8 @@
 #resetCanvasBtn {
   width: fit-content;
   min-height: 30px;
-  background-color: red;
+  background-color: rgb(167, 4, 4);
+  color: whitesmoke;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   margin: 20px 0 20px 100px;

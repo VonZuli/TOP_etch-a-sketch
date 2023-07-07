@@ -19,17 +19,15 @@ function buildCanvas() {
     const canvasItem = document.createElement("div");
     canvasItem.className = "canvasItem";
     canvasItem.id = `canvasItem-${i}`;
-    canvasItem.textContent = i;
-    container.appendChild(canvasItem);
-
     canvasItem.addEventListener("mouseenter", draw);
+
+    container.appendChild(canvasItem);
   }
 }
 
-buildCanvas();
-
 function draw() {
-  this.classList.add("colored");
+  // this.classList.add("colored");
+  this.style.backgroundColor = randomColor();
 }
 
 function resizeCanvas() {
@@ -51,10 +49,23 @@ function resizeCanvas() {
       const canvasItem = document.createElement("div");
       canvasItem.className = "canvasItem";
       canvasItem.id = `canvasItem-${i}`;
-      canvasItem.textContent = i;
-      container.appendChild(canvasItem);
-
       canvasItem.addEventListener("mouseenter", draw);
+
+      container.appendChild(canvasItem);
     }
   }
 }
+
+const randomColor = () => {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  // let a = 0.1;
+  // while (a < 1) {
+  //   a += a;
+  // }
+  return `rgba(${r},${g},${b})`;
+  // return `rgba(${r},${g},${b},${a})`;
+};
+
+buildCanvas();
