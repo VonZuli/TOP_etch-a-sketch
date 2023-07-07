@@ -18,7 +18,7 @@
   row-gap: 0px;
   margin: 0 auto;
 }
-.gridItem {
+.canvasItem {
   flex-basis: 6.25%;
   box-sizing: border-box;
   height: 50px;
@@ -27,4 +27,14 @@
 
 .colored {
   background-color: black;
+}
+
+#resetCanvasBtn {
+  width: fit-content;
+  min-height: 30px;
+  background-color: red;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px 0 20px 100px;
+  padding: 5px;
 }
